@@ -1,7 +1,9 @@
+/* Estilos Base (Mobile) */
 .hero {
     padding-top: 9rem;
     padding-bottom: 6rem;
     position: relative;
+    /* No mobile, ele herda o 'column' global do section, o que é bom */
 }
 
 .badge {
@@ -193,23 +195,31 @@
     color: var(--text-muted);
 }
 
-/* Responsive */
+/* Responsive (Desktop) */
 @media (min-width: 768px) {
     .hero {
+        /* IMPORTANTE: Aqui sobrescrevemos o 'column' global */
         display: flex;
+        flex-direction: row;
         align-items: center;
+        justify-content: space-between;
+
         gap: 4rem;
-        padding-top: 11rem;
-        padding-bottom: 8rem;
+        padding-top: 0;
+        /* Remove padding extra pois agora é full height */
+        padding-bottom: 0;
         text-align: left;
     }
 
     .hero-content {
         flex: 1;
+        max-width: 600px;
+        /* Garante que o texto não estique demais */
     }
 
     .code-visual {
         display: block;
         /* Aparece no desktop */
+        max-width: 500px;
     }
 }
