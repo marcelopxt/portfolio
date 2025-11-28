@@ -1,0 +1,11 @@
+.contact-box {
+    background: linear-gradient(145deg, #0f172a, #020617);
+    border: 1px solid var(--border-color);
+    border-radius: 1.5rem;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+}

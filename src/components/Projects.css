@@ -1,0 +1,117 @@
+#projetos {
+    background: var(--bg-dark);
+}
+
+.projects-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--bg-card);
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(34, 211, 238, 0.3);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+}
+
+.project-thumb {
+    height: 13rem;
+    position: relative;
+    background: var(--bg-card-hover);
+}
+
+.thumb-1 {
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+}
+
+.thumb-2 {
+    background: linear-gradient(135deg, #059669, #14b8a6);
+}
+
+.thumb-3 {
+    background: linear-gradient(135deg, #7c3aed, #db2777);
+}
+
+.thumb-icon {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(4px);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-content {
+    padding: 1.75rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.project-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+    background: rgba(34, 211, 238, 0.1);
+    padding: 0.25rem 0.6rem;
+    border-radius: 0.3rem;
+}
+
+.project-links {
+    margin-top: auto;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    gap: 1.25rem;
+}
+
+.link-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.link-item:hover {
+    color: var(--text-primary);
+}
