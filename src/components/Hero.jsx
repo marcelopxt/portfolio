@@ -7,12 +7,8 @@ export default function Hero({ scrollToId }) {
       <div className="hero-content">
         <div className="badge">Disponível para novos projetos</div>
         <h1>
-          Olá, eu sou <br />
           <span className="gradient-text">Desenvolvedor Fullstack</span>
         </h1>
-        <h2 style={{ fontSize: '1.5rem', color: 'var(--text-secondary)', marginBottom: '1.5rem', fontWeight: 500 }}>
-          Desenvolvedor Fullstack
-        </h2>
         <p>
           Especialista em criar soluções web de alta performance. Do front-end elegante ao back-end robusto, transformo ideias complexas em código limpo.
         </p>

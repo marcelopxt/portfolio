@@ -9,6 +9,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import WhatsAppBtn from './components/WhatsAppBtn';
 
 function App() {
   // Função de Scroll Suave
@@ -35,6 +36,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+      <WhatsAppBtn />
     </div>
   );
 }
