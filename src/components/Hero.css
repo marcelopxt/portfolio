@@ -1,9 +1,10 @@
-/* Estilos Base (Mobile) */
+/* src/components/Hero.css */
+
+/* Estilos Base (Mobile e Tablet) */
 .hero {
     padding-top: 9rem;
     padding-bottom: 6rem;
     position: relative;
-    /* No mobile, ele herda o 'column' global do section, o que é bom */
 }
 
 .badge {
@@ -23,6 +24,12 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 800;
+    line-height: 1.1;
+    display: inline-block;
 }
 
 .hero p {
@@ -92,7 +99,6 @@
 /* Code Visual */
 .code-visual {
     display: none;
-    /* Base: Oculto no mobile */
     position: relative;
     flex: 1;
     margin-left: 2rem;
@@ -195,18 +201,16 @@
     color: var(--text-muted);
 }
 
-/* Responsive (Desktop) */
-@media (min-width: 768px) {
+/* Responsive (Desktop Grande) */
+/* MUDANÇA: Alterado de 768px para 1024px para evitar sobreposição em tablets */
+@media (min-width: 1024px) {
     .hero {
-        /* IMPORTANTE: Aqui sobrescrevemos o 'column' global */
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-
         gap: 4rem;
         padding-top: 0;
-        /* Remove padding extra pois agora é full height */
         padding-bottom: 0;
         text-align: left;
     }
@@ -214,12 +218,11 @@
     .hero-content {
         flex: 1;
         max-width: 600px;
-        /* Garante que o texto não estique demais */
+        /* REMOVIDO: z-index: 20; */
     }
 
     .code-visual {
         display: block;
-        /* Aparece no desktop */
         max-width: 500px;
     }
 }
