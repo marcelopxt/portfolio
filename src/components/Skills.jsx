@@ -1,6 +1,6 @@
-import React from 'react';
-import './Skills.css'; // Certifique-se de usar o CSS atualizado acima
-import { Layout, Server, Database } from 'lucide-react';
+import React from "react";
+import "./Skills.css";
+import { Layout, Server, Database } from "lucide-react";
 
 export default function Skills() {
   return (
@@ -8,11 +8,12 @@ export default function Skills() {
       <div className="container">
         <div className="section-header">
           <h2>Tech Stack</h2>
-          <p style={{ color: 'var(--text-muted)' }}>As ferramentas que uso para construir o futuro</p>
+          <p style={{ color: "var(--text-muted)" }}>
+            As ferramentas que uso para construir o futuro
+          </p>
         </div>
 
         <div className="skills-grid">
-          
           {/* FRONTEND */}
           <div className="skill-card">
             <div className="skill-header">
@@ -21,27 +22,55 @@ export default function Skills() {
               </div>
               <h3>Frontend</h3>
             </div>
-            
+
             <div className="tech-grid">
+              {/* HTML5 (Novo) */}
+              <div className="tech-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                  alt="HTML5"
+                />
+                <span>HTML5</span>
+              </div>
+              {/* CSS3 */}
+              <div className="tech-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                  alt="CSS"
+                />
+                <span>CSS3</span>
+              </div>
+              {/* Javascript */}
+              <div className="tech-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                  alt="JS"
+                />
+                <span>Javascript</span>
+              </div>
               {/* React */}
               <div className="tech-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  alt="React"
+                />
                 <span>React</span>
               </div>
-              {/* JS */}
+              {/* React Native (Novo) */}
               <div className="tech-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" />
-                <span>Javascript</span>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  alt="React Native"
+                />
+                <span>React Native</span>
               </div>
               {/* Bootstrap */}
               <div className="tech-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                  alt="Bootstrap"
+                />
                 <span>Bootstrap</span>
-              </div>
-               {/* HTML/CSS (Opcional) */}
-               <div className="tech-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
-                <span>CSS3</span>
               </div>
             </div>
           </div>
@@ -49,27 +78,54 @@ export default function Skills() {
           {/* BACKEND */}
           <div className="skill-card">
             <div className="skill-header">
-              <div className="skill-icon-box" style={{ color: '#34d399', background: 'rgba(52, 211, 153, 0.1)' }}>
+              <div
+                className="skill-icon-box"
+                style={{
+                  color: "#34d399",
+                  background: "rgba(52, 211, 153, 0.1)",
+                }}
+              >
                 <Server size={28} />
               </div>
               <h3>Backend</h3>
             </div>
             <div className="tech-grid">
               <div className="tech-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                  alt="PHP"
+                />
                 <span>PHP</span>
               </div>
               <div className="tech-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel" />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"
+                  alt="Laravel"
+                />
                 <span>Laravel</span>
               </div>
               <div className="tech-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
-                <span>Java</span>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                  alt="Node"
+                />
+                <span>Node.js</span>
+              </div>
+              {/* Express (Novo) - Com filtro para ficar branco */}
+              <div className="tech-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                  alt="Express"
+                  style={{ filter: "invert(1)" }}
+                />
+                <span>Express</span>
               </div>
               <div className="tech-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node" />
-                <span>Node.js</span>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                  alt="Java"
+                />
+                <span>Java</span>
               </div>
             </div>
           </div>
@@ -77,32 +133,60 @@ export default function Skills() {
           {/* DEVOPS & DB */}
           <div className="skill-card">
             <div className="skill-header">
-              <div className="skill-icon-box" style={{ color: '#c084fc', background: 'rgba(192, 132, 252, 0.1)' }}>
+              <div
+                className="skill-icon-box"
+                style={{
+                  color: "#c084fc",
+                  background: "rgba(192, 132, 252, 0.1)",
+                }}
+              >
                 <Database size={28} />
               </div>
               <h3>Data & Ops</h3>
             </div>
             <div className="tech-grid">
               <div className="tech-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                  alt="MySQL"
+                />
                 <span>MySQL</span>
               </div>
               <div className="tech-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                  alt="MongoDB"
+                />
                 <span>MongoDB</span>
               </div>
               <div className="tech-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                  alt="Git"
+                />
                 <span>Git</span>
               </div>
-               {/* Exemplo Genérico para CI/CD pois não tem ícone único */}
-               <div className="tech-item">
-                <div style={{width:'32px', height:'32px', background:'#fff', borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', fontSize:'10px', color:'#000', fontWeight:'bold'}}>CI</div>
+              <div className="tech-item">
+                <div
+                  style={{
+                    width: "32px",
+                    height: "32px",
+                    background: "#fff",
+                    borderRadius: "50%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "10px",
+                    color: "#000",
+                    fontWeight: "bold",
+                  }}
+                >
+                  CI
+                </div>
                 <span>CI/CD</span>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
