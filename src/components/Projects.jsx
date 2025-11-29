@@ -37,17 +37,6 @@ export default function Projects() {
       },
       image: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
-    {
-      id: 4,
-      title: "teste",
-      description: "Plataforma completa de comércio com sistema de carrinho, cálculo de frete e painel administrativo.",
-      tags: ["PHP", "Laravel", "MySQL", "Bootstrap"],
-      links: {
-        code: "https://github.com/marcelopxt/Ceramica",
-        demo: "#"
-      },
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    }
   ];
 
   return (
