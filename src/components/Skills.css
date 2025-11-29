@@ -4,9 +4,7 @@
 
 .skills-grid {
     display: grid;
-    /* Base Grid */
     grid-template-columns: 1fr;
-    /* Base Mobile: 1 coluna */
     gap: 2rem;
 }
 
@@ -72,10 +70,8 @@
     background: rgba(34, 211, 238, 0.05);
 }
 
-/* Responsive */
 @media (min-width: 768px) {
     .skills-grid {
         grid-template-columns: repeat(3, 1fr);
-        /* Desktop: 3 colunas */
     }
 }

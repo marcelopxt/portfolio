@@ -56,7 +56,6 @@ nav.scrolled {
     border-color: var(--accent-primary);
 }
 
-/* Mobile Menu */
 .mobile-menu-btn {
     color: white;
     display: block;
@@ -92,7 +91,6 @@ nav.scrolled {
     color: white;
 }
 
-/* Responsive */
 @media (min-width: 768px) {
     .mobile-menu-btn {
         display: none;

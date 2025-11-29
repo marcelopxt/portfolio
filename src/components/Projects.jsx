@@ -5,7 +5,6 @@ export default function Projects() {
   return (
     <section id="projetos">
       <div className="container">
-        {/* Cabeçalho Flex */}
         <div className="projects-header-flex">
           <div>
             <h2 style={{ fontSize: '2.25rem', fontWeight: 700, color: 'white', marginBottom: '0.5rem', lineHeight: 1.2 }}>
@@ -19,7 +18,6 @@ export default function Projects() {
         </div>
 
         <div className="projects-grid">
-          {/* Project 1 */}
           <div className="project-card">
             <div className="project-thumb thumb-1">
               <div className="thumb-icon"><ShoppingCart /></div>
@@ -46,7 +44,6 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* Project 2 */}
           <div className="project-card">
             <div className="project-thumb thumb-2">
               <div className="thumb-icon"><CheckSquare /></div>
@@ -73,7 +70,6 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* Project 3 */}
           <div className="project-card">
             <div className="project-thumb thumb-3">
               <div className="thumb-icon"><Laptop /></div>

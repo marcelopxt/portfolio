@@ -12,7 +12,6 @@ export default function Skills() {
         </div>
 
         <div className="skills-grid">
-          {/* Frontend */}
           <div className="skill-card">
             <div className="skill-header">
               <div className="skill-icon-box">
@@ -27,7 +26,6 @@ export default function Skills() {
             </div>
           </div>
 
-          {/* Backend */}
           <div className="skill-card">
             <div className="skill-header">
               <div className="skill-icon-box" style={{ color: '#34d399' }}>
@@ -45,7 +43,6 @@ export default function Skills() {
             </div>
           </div>
 
-          {/* Database */}
           <div className="skill-card">
             <div className="skill-header">
               <div className="skill-icon-box" style={{ color: '#c084fc' }}>

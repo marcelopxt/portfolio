@@ -13,7 +13,6 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
-    /* Importante: permite que o tooltip saia dos limites do botão */
     overflow: visible;
 }
 
@@ -23,34 +22,25 @@
     background-color: #22c35e;
 }
 
-/* Estilos do Tooltip */
 .whatsapp-tooltip {
     position: absolute;
     right: 120%;
-    /* Posiciona à esquerda do botão */
     top: 50%;
     transform: translateY(-50%) translateX(10px);
-    /* Começa levemente deslocado */
     background-color: white;
     color: #0f172a;
-    /* Cor escura para o texto */
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     font-size: 0.85rem;
     font-weight: 500;
     white-space: nowrap;
-    /* Impede que o texto quebre linha */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-
-    /* Estado inicial (invisível) */
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
     pointer-events: none;
-    /* Evita que o tooltip atrapalhe cliques */
 }
 
-/* Triângulo do tooltip (setinha apontando para o botão) */
 .whatsapp-tooltip::after {
     content: '';
     position: absolute;
@@ -62,15 +52,12 @@
     border-color: transparent transparent transparent white;
 }
 
-/* Estado Hover (Visível) */
 .whatsapp-btn:hover .whatsapp-tooltip {
     opacity: 1;
     visibility: visible;
     transform: translateY(-50%) translateX(0);
-    /* Animação suave */
 }
 
-/* Mobile: Ajustes e esconder tooltip (hover em mobile é bugado) */
 @media (max-width: 768px) {
     .whatsapp-btn {
         bottom: 1.5rem;
@@ -84,7 +71,6 @@
         height: 24px;
     }
 
-    /* Esconde o tooltip no celular para não atrapalhar a tela */
     .whatsapp-tooltip {
         display: none;
     }

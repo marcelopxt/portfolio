@@ -1,4 +1,5 @@
 import React from 'react';
+import './About.css';
 
 export default function About() {
   return (
@@ -6,16 +7,39 @@ export default function About() {
       <div className="container">
         <div className="section-header">
           <h2>Sobre Mim</h2>
-          <div style={{ width: '4rem', height: '4px', background: 'var(--accent-primary)', margin: '0 auto', borderRadius: '2px' }}></div>
+          <div className="section-line"></div>
         </div>
 
-        <div className="contact-box" style={{ padding: '3rem', textAlign: 'left', background: 'var(--bg-card)' }}>
-          <p style={{ marginBottom: '1.5rem', color: 'var(--text-secondary)', fontSize: '1.125rem' }}>
-            Sou um desenvolvedor apaixonado por tecnologia e inovação. Com experiência sólida tanto no frontend quanto no backend, meu foco é sempre entregar a melhor experiência possível para o usuário final, sem sacrificar a qualidade do código.
-          </p>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.125rem' }}>
-            Atualmente, estou me especializando em arquiteturas escaláveis e microsserviços. Acredito que o aprendizado contínuo é a chave para se manter relevante na área de tecnologia.
-          </p>
+        <div className="about-grid">
+          
+          {/* Lado Esquerdo: Personagem Pixel Art (Agora vem primeiro) */}
+          <div className="about-visual">
+            <div className="pixel-art-wrapper">
+              {/* Troque pelo seu arquivo local quando tiver */}
+              <img 
+                src="src\assets\marcelo-pixel.png" 
+                alt="Pixel Art Programmer" 
+                className="pixel-avatar"
+              />
+              <div className="pixel-glow"></div>
+            </div>
+          </div>
+
+          {/* Lado Direito: Texto */}
+          <div className="about-text-content">
+            <div className="about-card">
+              <p className="highlight-p">
+                Sou um desenvolvedor apaixonado por transformar linhas de código em soluções reais.
+              </p>
+              <p>
+                Com experiência sólida tanto no <strong>Frontend</strong> quanto no <strong>Backend</strong>, meu foco é sempre entregar a melhor experiência possível para o usuário final, sem sacrificar a performance e a escalabilidade.
+              </p>
+              <p>
+                Atualmente, estou me aprofundando em arquiteturas de microsserviços e explorando novas formas de otimizar aplicações web complexas.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

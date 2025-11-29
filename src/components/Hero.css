@@ -1,6 +1,3 @@
-/* src/components/Hero.css */
-
-/* Estilos Base (Mobile e Tablet) */
 .hero {
     padding-top: 9rem;
     padding-bottom: 6rem;
@@ -96,7 +93,6 @@
     transform: translateY(-2px);
 }
 
-/* Code Visual */
 .code-visual {
     display: none;
     position: relative;
@@ -201,8 +197,6 @@
     color: var(--text-muted);
 }
 
-/* Responsive (Desktop Grande) */
-/* MUDANÇA: Alterado de 768px para 1024px para evitar sobreposição em tablets */
 @media (min-width: 1024px) {
     .hero {
         display: flex;
@@ -218,7 +212,6 @@
     .hero-content {
         flex: 1;
         max-width: 600px;
-        /* REMOVIDO: z-index: 20; */
     }
 
     .code-visual {

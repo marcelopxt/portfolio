@@ -13,9 +13,7 @@
 
 .projects-grid {
     display: grid;
-    /* Base Grid */
     grid-template-columns: 1fr;
-    /* Base Mobile: 1 coluna */
     gap: 2rem;
 }
 
@@ -118,7 +116,6 @@
     color: var(--text-primary);
 }
 
-/* Responsive */
 @media (min-width: 768px) {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);

@@ -27,7 +27,6 @@ export default function Navbar({ scrollToId }) {
           <span>Marcelo Peixoto</span>
         </div>
 
-        {/* Desktop Menu */}
         <div className="nav-links md-flex items-center gap-8">
           <button onClick={() => scrollToId('home')}>Home</button>
           <button onClick={() => scrollToId('sobre')}>Sobre</button>
@@ -44,7 +43,6 @@ export default function Navbar({ scrollToId }) {
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           className="mobile-menu-btn"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -53,7 +51,6 @@ export default function Navbar({ scrollToId }) {
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
       <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
         <button onClick={() => handleLinkClick('home')}>Home</button>
         <button onClick={() => handleLinkClick('sobre')}>Sobre</button>
