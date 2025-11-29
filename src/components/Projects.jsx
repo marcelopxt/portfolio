@@ -1,102 +1,116 @@
 import React from 'react';
-import { ExternalLink, ShoppingCart, CheckSquare, Laptop, Github, Globe } from 'lucide-react';
 import './Projects.css';
+import { Github, ExternalLink, Folder } from 'lucide-react';
+
 export default function Projects() {
+  const projects = [
+    {
+      id: 1,
+      title: "E-Commerce Base",
+      description: "Plataforma completa de comércio com sistema de carrinho, cálculo de frete e painel administrativo.",
+      tags: ["PHP", "Laravel", "MySQL", "Bootstrap"],
+      links: {
+        code: "https://github.com/marcelopxt/Ceramica",
+        demo: "#"
+      },
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      id: 2,
+      title: "Gerenciador de Notas",
+      description: "App de produtividade para organização pessoal com sistema de tags, busca rápida e modo escuro.",
+      tags: ["Node.js", "Express", "MongoDB", "React"],
+      links: {
+        code: "https://github.com/marcelopxt/Notas",
+        demo: "#"
+      },
+      image: "https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      id: 3,
+      title: "Sistema Escolar & API",
+      description: "Integração complexa entre uma API RESTful em Laravel e um cliente Desktop Java Swing.",
+      tags: ["Java", "Laravel", "API REST", "Swing"],
+      links: {
+        code: "https://github.com/marcelopxt/Projeto_aplicacao_Java_com_API",
+        demo: "#"
+      },
+      image: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      id: 4,
+      title: "teste",
+      description: "Plataforma completa de comércio com sistema de carrinho, cálculo de frete e painel administrativo.",
+      tags: ["PHP", "Laravel", "MySQL", "Bootstrap"],
+      links: {
+        code: "https://github.com/marcelopxt/Ceramica",
+        demo: "#"
+      },
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  ];
+
   return (
     <section id="projetos">
       <div className="container">
-        <div className="projects-header-flex">
-          <div>
-            <h2 style={{ fontSize: '2.25rem', fontWeight: 700, color: 'white', marginBottom: '0.5rem', lineHeight: 1.2 }}>
-              Projetos em Destaque
-            </h2>
-            <p style={{ color: 'var(--text-muted)' }}>Trabalhos recentes que demonstram minhas habilidades</p>
+        
+        {/* Header da Seção */}
+        <div className="projects-header">
+          <div className="header-content">
+            <h2>Projetos em Destaque</h2>
+            <p>Uma seleção do que tenho construído recentemente</p>
           </div>
-          <a href="https://github.com/marcelopxt" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-primary)', display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600, paddingBottom: '5px' }}>
-            Ver Github <ExternalLink size={18} />
+          <a 
+            href="https://github.com/marcelopxt" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="github-link-btn"
+          >
+            <Github size={20} />
+            Ver todos no Github
           </a>
         </div>
 
+        {/* Grid de Cards */}
         <div className="projects-grid">
-          <div className="project-card">
-            <div className="project-thumb thumb-1">
-              <div className="thumb-icon"><ShoppingCart /></div>
-            </div>
-            <div className="project-content">
-              <h3 className="project-title">E-Commerce Base</h3>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1rem' }}>
-                Plataforma completa de comércio de peças artesanais com sistema de login, frete, carrinho e pagamentos.
-              </p>
-              <div className="project-tags">
-                <span className="project-tag">PHP</span>
-                <span className="project-tag">Laravel</span>
-                <span className="project-tag">JS</span>
-                <span className="project-tag">MySQL</span>
+          {projects.map((project) => (
+            <div key={project.id} className="project-card">
+              
+              {/* Imagem com Overlay */}
+              <div className="card-image-wrapper">
+                <img src={project.image} alt={project.title} />
+                <div className="card-overlay">
+                  <Folder size={40} strokeWidth={1.5} />
+                </div>
               </div>
-              <div className="project-links">
-                <a href="https://github.com/marcelopxt/Ceramica" className="link-item">
-                  <Github size={16} /> Código
-                </a>
-                <a href="#" className="link-item">
-                  <Globe size={16} /> Demo
-                </a>
-              </div>
-            </div>
-          </div>
 
-          <div className="project-card">
-            <div className="project-thumb thumb-2">
-              <div className="thumb-icon"><CheckSquare /></div>
-            </div>
-            <div className="project-content">
-              <h3 className="project-title">Gerenciador de Notas</h3>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1rem' }}>
-                Gestor de anotações para organizar com tags e ter acesso rápido a estatísticas sobre elas.
-              </p>
-              <div className="project-tags">
-                <span className="project-tag">Node.js</span>
-                <span className="project-tag">Express</span>
-                <span className="project-tag">Javascript</span>
-                <span className="project-tag">MongoDB</span>
-              </div>
-              <div className="project-links">
-                <a href="https://github.com/marcelopxt/Notas" className="link-item">
-                  <Github size={16} /> Código
-                </a>
-                <a href="#" className="link-item">
-                  <Globe size={16} /> Demo
-                </a>
-              </div>
-            </div>
-          </div>
+              {/* Conteúdo do Card */}
+              <div className="card-content">
+                <h3 className="card-title">{project.title}</h3>
+                <p className="card-description">{project.description}</p>
+                
+                {/* Tags */}
+                <div className="card-tags">
+                  {project.tags.map((tag, index) => (
+                    <span key={index} className="tech-pill">{tag}</span>
+                  ))}
+                </div>
 
-          <div className="project-card">
-            <div className="project-thumb thumb-3">
-              <div className="thumb-icon"><Laptop /></div>
-            </div>
-            <div className="project-content">
-              <h3 className="project-title">Aplicação Java desktop / API Laravel</h3>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1rem' }}>
-                API desenvolvida em Laravel para gerenciar alunos e uma aplicação Java Desktop que consome essa API para realizar operações de CRUD.
-              </p>
-              <div className="project-tags">
-                <span className="project-tag">Java</span>
-                <span className="project-tag">PHP</span>
-                <span className="project-tag">Java Swing</span>
-                <span className="project-tag">Laravel</span>
-                <span className="project-tag">MySQL</span>
+                {/* Botões de Ação */}
+                <div className="card-actions">
+                  <a href={project.links.code} target="_blank" rel="noopener noreferrer" className="btn-code">
+                    <Github size={18} /> Code
+                  </a>
+                  <a href={project.links.demo} className="btn-demo" title="Demo Indisponível (Em breve)">
+                    <ExternalLink size={18} /> Demo
+                  </a>
+                </div>
               </div>
-              <div className="project-links">
-                <a href="https://github.com/marcelopxt/Projeto_aplicacao_Java_com_API" className="link-item">
-                  <Github size={16} /> Código
-                </a>
-                <a href="#" className="link-item">
-                  <Globe size={16} /> Demo
-                </a>
-              </div>
+
             </div>
-          </div>
+          ))}
         </div>
+
       </div>
     </section>
   );
