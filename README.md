@@ -71,15 +71,11 @@ public/
 └── favicon.svg    # Ícone da aba
 ```
 ## 🔍 SEO e Performance
-Este portfólio foi otimizado para motores de busca (Google/Bing):
-
-Tag Canonical implementada para evitar conteúdo duplicado.
-
-Schema Markup (JSON-LD) definindo a entidade Person para rich snippets.
-
-Open Graph configurado para compartilhamento bonito no LinkedIn e WhatsApp.
-
-Sitemap.xml gerado e submetido ao Google Search Console.
+- Este portfólio foi otimizado para motores de busca (Google/Bing):
+- Tag Canonical implementada para evitar conteúdo duplicado.
+- Schema Markup (JSON-LD) definindo a entidade Person para rich snippets.
+- Open Graph configurado para compartilhamento bonito no LinkedIn e WhatsApp.
+- Sitemap.xml gerado e submetido ao Google Search Console.
 
 ## 📬 Contato
 Gostou do portfólio? Vamos trabalhar juntos!
