@@ -14,7 +14,7 @@ export default function Contact() {
 
     try {
       // ⚠️ TROQUE "SEU_CODIGO_AQUI" PELO ID DO FORMSPREE
-      const response = await fetch("https://formspree.io/f/movpajdd", {
+      const response = await fetch("#", {
         method: "POST",
         body: data,
         headers: {
@@ -151,4 +151,5 @@ export default function Contact() {
       </div>
     </section>
   );
+
 }
