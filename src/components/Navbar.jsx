@@ -46,6 +46,7 @@ export default function Navbar({ scrollToId }) {
         <button
           className="mobile-menu-btn"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Abrir menu de navegação"
         >
           {isMenuOpen ? <X /> : <Menu />}
         </button>
