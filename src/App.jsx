@@ -23,13 +23,22 @@ function App() {
 
   return (
     <div className="App">
+      {/* A Navbar fica fora do main pois é navegação global */}
       <Navbar scrollToId={scrollToId} />
-      <Hero scrollToId={scrollToId} />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+
+      {/* Tag main envolve todo o conteúdo único da página */}
+      <main>
+        <Hero scrollToId={scrollToId} />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
+
+      {/* O Footer fica fora do main */}
       <Footer />
+
+      {/* Botões flutuantes ficam fora do fluxo principal */}
       <WhatsAppBtn />
     </div>
   );
