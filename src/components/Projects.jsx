@@ -9,14 +9,14 @@ import {
 } from "lucide-react";
 
 // --- Importação das Imagens do Projeto Cerâmica ---
-import ceramicaInicial from "../assets/ceramica/pagina_inicial.png";
-import ceramicaCadastro from "../assets/ceramica/pagina_cadastro.png";
-import ceramicaLogin from "../assets/ceramica/pagina_login.png";
-import ceramicaProdutos from "../assets/ceramica/pagina_produtos.png";
-import ceramicaProduto from "../assets/ceramica/pagina_produto.png";
-import ceramicaCarrinho from "../assets/ceramica/carrinho.png";
-import ceramicaSobre from "../assets/ceramica/pagina_sobre.png";
-import ceramicaFooter from "../assets/ceramica/footer.png";
+import ceramicaInicial from "../assets/ceramica/pagina_inicial.webp";
+import ceramicaCadastro from "../assets/ceramica/pagina_cadastro.webp";
+import ceramicaLogin from "../assets/ceramica/pagina_login.webp";
+import ceramicaProdutos from "../assets/ceramica/pagina_produtos.webp";
+import ceramicaProduto from "../assets/ceramica/pagina_produto.webp";
+import ceramicaCarrinho from "../assets/ceramica/carrinho.webp";
+import ceramicaSobre from "../assets/ceramica/pagina_sobre.webp";
+import ceramicaFooter from "../assets/ceramica/footer.webp";
 
 // --- Importação das Imagens do Projeto Java API ---
 import javaIndex from "../assets/java_api/index.png";
