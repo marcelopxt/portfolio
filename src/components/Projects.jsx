@@ -24,38 +24,38 @@ export default function Projects() {
         demo: "#",
       },
       // Imagem de capa
-      image: "src/assets/ceramica/pagina_cadastro.png",
+      image: "../assets/ceramica/pagina_cadastro.png",
       screenshots: [
         {
-          url: "src/assets/ceramica/pagina_inicial.png",
+          url: "../assets/ceramica/pagina_inicial.png",
           title: "Página Inicial",
         },
         {
-          url: "src/assets/ceramica/pagina_cadastro.png",
+          url: "../assets/ceramica/pagina_cadastro.png",
           title: "Cadastro de Usuário",
         },
         {
-          url: "src/assets/ceramica/pagina_login.png",
+          url: "../assets/ceramica/pagina_login.png",
           title: "Tela de Login",
         },
         {
-          url: "src/assets/ceramica/pagina_produtos.png",
+          url: "../assets/ceramica/pagina_produtos.png",
           title: "Catálogo de Produtos",
         },
         {
-          url: "src/assets/ceramica/pagina_produto.png",
+          url: "../assets/ceramica/pagina_produto.png",
           title: "Detalhes do Produto",
         },
         {
-          url: "src/assets/ceramica/carrinho.png",
+          url: "../assets/ceramica/carrinho.png",
           title: "Carrinho de Compras",
         },
         {
-          url: "src/assets/ceramica/pagina_sobre.png",
+          url: "../assets/ceramica/pagina_sobre.png",
           title: "Página Sobre",
         },
         {
-          url: "src/assets/ceramica/footer.png",
+          url: "../assets/ceramica/footer.png",
           title: "Rodapé e Links",
         },
       ],
@@ -70,16 +70,16 @@ export default function Projects() {
         code: "https://github.com/marcelopxt/Projeto_aplicacao_Java_com_API",
         demo: "#",
       },
-      image: "src/assets/java_api/index.png",
+      image: "../assets/java_api/index.png",
       screenshots: [
-        { url: "src/assets/java_api/index.png", title: "Tela Inicial Java" },
-        { url: "src/assets/java_api/new.png", title: "Novo Registro" },
-        { url: "src/assets/java_api/edit.png", title: "Edição de Dados" },
-        { url: "src/assets/java_api/delete.png", title: "Exclusão de Registro" },
-        { url: "src/assets/java_api/api_get.png", title: "Rota API: GET" },
-        { url: "src/assets/java_api/api_post.png", title: "Rota API: POST" },
-        { url: "src/assets/java_api/api_put.png", title: "Rota API: PUT" },
-        { url: "src/assets/java_api/api_delete.png", title: "Rota API: DELETE" },
+        { url: "../assets/java_api/index.png", title: "Tela Inicial Java" },
+        { url: "../assets/java_api/new.png", title: "Novo Registro" },
+        { url: "../assets/java_api/edit.png", title: "Edição de Dados" },
+        { url: "../assets/java_api/delete.png", title: "Exclusão de Registro" },
+        { url: "../assets/java_api/api_get.png", title: "Rota API: GET" },
+        { url: "../assets/java_api/api_post.png", title: "Rota API: POST" },
+        { url: "../assets/java_api/api_put.png", title: "Rota API: PUT" },
+        { url: "../assets/java_api/api_delete.png", title: "Rota API: DELETE" },
       ],
     },
   ];
