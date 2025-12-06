@@ -75,13 +75,13 @@ export default function Contact() {
             <div className="social-connect">
               <p>Me encontre nas redes:</p>
               <div className="social-icons">
-                <a href="https://github.com/marcelopxt" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/marcelopxt" target="_blank" rel="noopener noreferrer" aria-label="Perfil no Github" >
                   <Github size={20} />
                 </a>
-                <a href="https://linkedin.com/in/marcelopeixotodesouza" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com/in/marcelopeixotodesouza" target="_blank" rel="noopener noreferrer" aria-label="Perfil no Linkedin">
                   <Linkedin size={20} />
                 </a>
-                <a href="https://instagram.com/marcelo.pxt_" target="_blank" rel="noopener noreferrer">
+                <a href="https://instagram.com/marcelo.pxt_" target="_blank" rel="noopener noreferrer" aria-label="Perfil no Instagram">
                   <Instagram size={20} />
                 </a>
               </div>

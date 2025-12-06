@@ -6,8 +6,8 @@ export default function Footer() {
     <footer>
       <div className="container">
         <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginBottom: '1.5rem' }}>
-          <a href="https://github.com/marcelopxt" style={{ color: 'var(--text-dim)' }}><Github /></a>
-          <a href="https://linkedin.com/in/marcelopeixotodesouza" style={{ color: 'var(--text-dim)' }}><Linkedin /></a>
+          <a href="https://github.com/marcelopxt" style={{ color: 'var(--text-dim)' }} aria-label="Perfil no Github"><Github /></a>
+          <a href="https://linkedin.com/in/marcelopeixotodesouza" style={{ color: 'var(--text-dim)' }} aria-label="Perfil no Linkedin"  ><Linkedin /></a>
         </div>
         <p>&copy; 2025 Marcelo Peixoto. Todos os direitos reservados.</p>
       </div>

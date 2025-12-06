@@ -39,6 +39,7 @@ export default function Hero({ scrollToId }) {
             href="https://github.com/marcelopxt"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Perfil no Github"
           >
             <Github size={24} />
           </a>
@@ -46,10 +47,12 @@ export default function Hero({ scrollToId }) {
             href="https://linkedin.com/in/marcelopeixotodesouza"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Perfil no Linkedin"
           >
             <Linkedin size={24} />
           </a>
-          <a href="mailto:marcelopeixoto314@gmail.com">
+          <a href="mailto:marcelopeixoto314@gmail.com"
+          aria-label="Enviar Email">
             <Mail size={24} />
           </a>
         </div>
