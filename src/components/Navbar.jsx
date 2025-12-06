@@ -34,7 +34,7 @@ export default function Navbar({ scrollToId }) {
           <button onClick={() => scrollToId('projetos')}>Projetos</button>
           <button onClick={() => scrollToId('contato')}>Contato</button>
           <a
-            href="https://drive.google.com/file/d/1GRQcvhXY1W27KW7rX1NEzlQjjvvwz0MW/view?usp=sharing"
+            href="https://drive.google.com/file/d/16i1kJkiZx1MagGnBYfO8QAh3LlcSiY1w/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-resume"

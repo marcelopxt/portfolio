@@ -3,7 +3,7 @@ import './Contact.css';
 import { Mail, MapPin, Send, Github, Linkedin, Instagram, Loader2, Check } from 'lucide-react';
 
 export default function Contact() {
-  const [status, setStatus] = useState('idle'); // idle, sending, success, error
+  const [status, setStatus] = useState('idle');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -13,8 +13,7 @@ export default function Contact() {
     const data = new FormData(form);
 
     try {
-      // ⚠️ TROQUE "SEU_CODIGO_AQUI" PELO ID DO FORMSPREE
-      const response = await fetch("https://formspree.io/f/movpajdd", {
+      const response = await fetch("https://formspree.io/f/movglzjk", {
         method: "POST",
         body: data,
         headers: {
@@ -42,8 +41,6 @@ export default function Contact() {
       <div className="container">
         
         <div className="contact-wrapper">
-          
-          {/* Lado Esquerdo: Infos (Visual Antigo) */}
           <div className="contact-info">
             <div className="info-header">
               <h2 className="section-title">Vamos Conversar?</h2>

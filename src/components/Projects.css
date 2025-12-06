@@ -197,3 +197,167 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+/* ... (Mantenha o CSS anterior) ... */
+
+/* Ajuste no Overlay do Card para mostrar texto + ícone */
+.view-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .view-gallery {
+  transform: translateY(0);
+}
+
+/* --- MODAL STYLES --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(2, 6, 23, 0.85); /* Fundo escuro */
+  backdrop-filter: blur(8px); /* Desfoque no fundo */
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background: var(--bg-card);
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh; /* Altura máxima da tela */
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(15, 23, 42, 0.95);
+}
+
+.modal-header h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.close-btn {
+  color: var(--text-muted);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: var(--transition);
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ef4444; /* Vermelho ao passar o mouse */
+}
+
+.modal-body {
+  padding: 2rem;
+  overflow-y: auto; /* Permite rolar se tiver muitas imagens */
+}
+
+.modal-desc {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Galeria de Imagens dentro do Modal */
+.modal-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.modal-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Scrollbar customizada para o modal */
+.modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+.modal-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; /* Aumentei o espaço entre cada bloco de imagem */
+}
+
+/* Container de cada print individual */
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* Espaço entre o título e a imagem */
+}
+
+.gallery-title {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-left: 0.25rem;
+  border-left: 3px solid var(--accent-primary); /* Detalhe visual bonito */
+  line-height: 1.2;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.3);
+}
