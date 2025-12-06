@@ -8,6 +8,26 @@ import {
   Image as ImageIcon,
 } from "lucide-react";
 
+// --- Importação das Imagens do Projeto Cerâmica ---
+import ceramicaInicial from "../assets/ceramica/pagina_inicial.png";
+import ceramicaCadastro from "../assets/ceramica/pagina_cadastro.png";
+import ceramicaLogin from "../assets/ceramica/pagina_login.png";
+import ceramicaProdutos from "../assets/ceramica/pagina_produtos.png";
+import ceramicaProduto from "../assets/ceramica/pagina_produto.png";
+import ceramicaCarrinho from "../assets/ceramica/carrinho.png";
+import ceramicaSobre from "../assets/ceramica/pagina_sobre.png";
+import ceramicaFooter from "../assets/ceramica/footer.png";
+
+// --- Importação das Imagens do Projeto Java API ---
+import javaIndex from "../assets/java_api/index.png";
+import javaNew from "../assets/java_api/new.png";
+import javaEdit from "../assets/java_api/edit.png";
+import javaDelete from "../assets/java_api/delete.png";
+import javaApiGet from "../assets/java_api/api_get.png";
+import javaApiPost from "../assets/java_api/api_post.png";
+import javaApiPut from "../assets/java_api/api_put.png";
+import javaApiDelete from "../assets/java_api/api_delete.png";
+
 export default function Projects() {
   // Estado para controlar qual projeto está aberto no modal
   const [selectedProject, setSelectedProject] = useState(null);
@@ -23,39 +43,39 @@ export default function Projects() {
         code: "https://github.com/marcelopxt/Ceramica",
         demo: "#",
       },
-      // Imagem de capa
-      image: "../assets/ceramica/pagina_cadastro.png",
+      // Usando a variável importada
+      image: ceramicaCadastro, 
       screenshots: [
         {
-          url: "../assets/ceramica/pagina_inicial.png",
+          url: ceramicaInicial,
           title: "Página Inicial",
         },
         {
-          url: "../assets/ceramica/pagina_cadastro.png",
+          url: ceramicaCadastro,
           title: "Cadastro de Usuário",
         },
         {
-          url: "../assets/ceramica/pagina_login.png",
+          url: ceramicaLogin,
           title: "Tela de Login",
         },
         {
-          url: "../assets/ceramica/pagina_produtos.png",
+          url: ceramicaProdutos,
           title: "Catálogo de Produtos",
         },
         {
-          url: "../assets/ceramica/pagina_produto.png",
+          url: ceramicaProduto,
           title: "Detalhes do Produto",
         },
         {
-          url: "../assets/ceramica/carrinho.png",
+          url: ceramicaCarrinho,
           title: "Carrinho de Compras",
         },
         {
-          url: "../assets/ceramica/pagina_sobre.png",
+          url: ceramicaSobre,
           title: "Página Sobre",
         },
         {
-          url: "../assets/ceramica/footer.png",
+          url: ceramicaFooter,
           title: "Rodapé e Links",
         },
       ],
@@ -70,16 +90,16 @@ export default function Projects() {
         code: "https://github.com/marcelopxt/Projeto_aplicacao_Java_com_API",
         demo: "#",
       },
-      image: "../assets/java_api/index.png",
+      image: javaIndex,
       screenshots: [
-        { url: "../assets/java_api/index.png", title: "Tela Inicial Java" },
-        { url: "../assets/java_api/new.png", title: "Novo Registro" },
-        { url: "../assets/java_api/edit.png", title: "Edição de Dados" },
-        { url: "../assets/java_api/delete.png", title: "Exclusão de Registro" },
-        { url: "../assets/java_api/api_get.png", title: "Rota API: GET" },
-        { url: "../assets/java_api/api_post.png", title: "Rota API: POST" },
-        { url: "../assets/java_api/api_put.png", title: "Rota API: PUT" },
-        { url: "../assets/java_api/api_delete.png", title: "Rota API: DELETE" },
+        { url: javaIndex, title: "Tela Inicial Java" },
+        { url: javaNew, title: "Novo Registro" },
+        { url: javaEdit, title: "Edição de Dados" },
+        { url: javaDelete, title: "Exclusão de Registro" },
+        { url: javaApiGet, title: "Rota API: GET" },
+        { url: javaApiPost, title: "Rota API: POST" },
+        { url: javaApiPut, title: "Rota API: PUT" },
+        { url: javaApiDelete, title: "Rota API: DELETE" },
       ],
     },
   ];
