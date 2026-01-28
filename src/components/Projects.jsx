@@ -41,7 +41,7 @@ export default function Projects() {
       tags: ["PHP", "Laravel", "MySQL", "Bootstrap"],
       links: {
         code: "https://github.com/marcelopxt/Ceramica",
-        demo: "#",
+        demo: "https://projetoceramica.marcelopxt.dev/",
       },
       // Usando a variável importada
       image: ceramicaCadastro, 
@@ -221,4 +221,5 @@ export default function Projects() {
       </div>
     </section>
   );
+
 }
