@@ -3,12 +3,11 @@ import "./Projects.css";
 import {
   Github,
   ExternalLink,
-  Folder,
   X,
   Image as ImageIcon,
+  Wrench,
 } from "lucide-react";
 
-// --- Importação das Imagens do Projeto Cerâmica ---
 import ceramicaInicial from "../assets/ceramica/pagina_inicial.webp";
 import ceramicaCadastro from "../assets/ceramica/pagina_cadastro.webp";
 import ceramicaLogin from "../assets/ceramica/pagina_login.webp";
@@ -18,18 +17,9 @@ import ceramicaCarrinho from "../assets/ceramica/carrinho.webp";
 import ceramicaSobre from "../assets/ceramica/pagina_sobre.webp";
 import ceramicaFooter from "../assets/ceramica/footer.webp";
 
-// --- Importação das Imagens do Projeto Java API ---
-import javaIndex from "../assets/java_api/index.png";
-import javaNew from "../assets/java_api/new.png";
-import javaEdit from "../assets/java_api/edit.png";
-import javaDelete from "../assets/java_api/delete.png";
-import javaApiGet from "../assets/java_api/api_get.png";
-import javaApiPost from "../assets/java_api/api_post.png";
-import javaApiPut from "../assets/java_api/api_put.png";
-import javaApiDelete from "../assets/java_api/api_delete.png";
+import proativaIndex from "../assets/proativa/index.png";
 
 export default function Projects() {
-  // Estado para controlar qual projeto está aberto no modal
   const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
@@ -41,77 +31,58 @@ export default function Projects() {
       tags: ["PHP", "Laravel", "MySQL", "Bootstrap"],
       links: {
         code: "https://github.com/marcelopxt/Ceramica",
-        demo: "https://projetoceramica.marcelopxt.dev/",
+        demo: null,
       },
-      // Usando a variável importada
-      image: ceramicaCadastro, 
+      image: ceramicaCadastro,
       screenshots: [
-        {
-          url: ceramicaInicial,
-          title: "Página Inicial",
-        },
-        {
-          url: ceramicaCadastro,
-          title: "Cadastro de Usuário",
-        },
-        {
-          url: ceramicaLogin,
-          title: "Tela de Login",
-        },
-        {
-          url: ceramicaProdutos,
-          title: "Catálogo de Produtos",
-        },
-        {
-          url: ceramicaProduto,
-          title: "Detalhes do Produto",
-        },
-        {
-          url: ceramicaCarrinho,
-          title: "Carrinho de Compras",
-        },
-        {
-          url: ceramicaSobre,
-          title: "Página Sobre",
-        },
-        {
-          url: ceramicaFooter,
-          title: "Rodapé e Links",
-        },
+        { url: ceramicaInicial, title: "Página Inicial" },
+        { url: ceramicaCadastro, title: "Cadastro de Usuário" },
+        { url: ceramicaLogin, title: "Tela de Login" },
+        { url: ceramicaProdutos, title: "Catálogo de Produtos" },
+        { url: ceramicaProduto, title: "Detalhes do Produto" },
+        { url: ceramicaCarrinho, title: "Carrinho de Compras" },
+        { url: ceramicaSobre, title: "Página Sobre" },
+        { url: ceramicaFooter, title: "Rodapé e Links" },
       ],
     },
     {
       id: 2,
-      title: "Sistema Escolar & API",
+      title: "Site Institucional Proativa",
       description:
-        "Integração complexa entre uma API RESTful em Laravel e um cliente Desktop Java Swing.",
-      tags: ["Java", "Laravel", "API REST", "Swing"],
+        "Plataforma comercial para clínica de Saúde e Segurança do Trabalho (SST), focada na conversão e exposição de serviços como consultoria e medicina ocupacional.",
+      tags: ["React", "Vite", "Tailwind CSS"],
       links: {
-        code: "https://github.com/marcelopxt/Projeto_aplicacao_Java_com_API",
-        demo: "#",
+        code: "https://github.com/marcelopxt/reforma-proativa",
+        demo: "https://proativa.netlify.app",
       },
-      image: javaIndex,
-      screenshots: [
-        { url: javaIndex, title: "Tela Inicial Java" },
-        { url: javaNew, title: "Novo Registro" },
-        { url: javaEdit, title: "Edição de Dados" },
-        { url: javaDelete, title: "Exclusão de Registro" },
-        { url: javaApiGet, title: "Rota API: GET" },
-        { url: javaApiPost, title: "Rota API: POST" },
-        { url: javaApiPut, title: "Rota API: PUT" },
-        { url: javaApiDelete, title: "Rota API: DELETE" },
-      ],
+      image: proativaIndex,
+      screenshots: [{ url: proativaIndex, title: "Página Inicial" }],
+    },
+    {
+      id: 3,
+      title: "Projeto em Construção",
+      description:
+        "Em breve um novo projeto estará disponível para visualização. Trabalhando em novas soluções e aprimorando habilidades.",
+      tags: ["Em Breve"],
+      links: {
+        code: null,
+        demo: null,
+      },
+      image: null, // Definido como null para acionar o placeholder
+      screenshots: [],
     },
   ];
 
   const handleOpenModal = (project) => {
+    if (!project.screenshots || project.screenshots.length === 0) return;
+
     setSelectedProject(project);
-    document.body.style.overflow = "hidden"; // Impede o scroll da página de fundo
+    document.body.style.overflow = "hidden";
   };
 
   const handleCloseModal = () => {
     setSelectedProject(null);
-    document.body.style.overflow = "auto"; // Libera o scroll
+    document.body.style.overflow = "auto";
   };
 
   return (
@@ -139,15 +110,45 @@ export default function Projects() {
               <div
                 className="card-image-wrapper"
                 onClick={() => handleOpenModal(project)}
-                style={{ cursor: "pointer" }}
+                style={{
+                  cursor:
+                    project.screenshots && project.screenshots.length > 0
+                      ? "pointer"
+                      : "default",
+                }}
               >
-                <img src={project.image} alt={project.title} />
-                <div className="card-overlay">
-                  <div className="view-gallery">
-                    <ImageIcon size={32} />
-                    <span>Ver Galeria</span>
+                {/* Renderização condicional da imagem ou do placeholder */}
+                {project.image ? (
+                  <img src={project.image} alt={project.title} />
+                ) : (
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "220px",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      backgroundColor:
+                        "#1e293b" /* Tom escuro, ajuste conforme seu CSS */,
+                      color: "#64748b",
+                    }}
+                  >
+                    <Wrench size={48} style={{ marginBottom: "10px" }} />
+                    <span style={{ fontSize: "14px", fontWeight: "500" }}>
+                      Em Construção
+                    </span>
                   </div>
-                </div>
+                )}
+
+                {project.screenshots && project.screenshots.length > 0 && (
+                  <div className="card-overlay">
+                    <div className="view-gallery">
+                      <ImageIcon size={32} />
+                      <span>Ver Galeria</span>
+                    </div>
+                  </div>
+                )}
               </div>
 
               <div className="card-content">
@@ -163,34 +164,35 @@ export default function Projects() {
                 </div>
 
                 <div className="card-actions">
-                  <a
-                    href={project.links.code}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-code"
-                  >
-                    <Github size={18} /> Code
-                  </a>
-                  <a
-                    href={project.links.demo}
-                    className="btn-demo"
-                    title="Demo Indisponível (Em breve)"
-                  >
-                    <ExternalLink size={18} /> Demo
-                  </a>
+                  {project.links.code && (
+                    <a
+                      href={project.links.code}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-code"
+                    >
+                      <Github size={18} /> Code
+                    </a>
+                  )}
+                  {project.links.demo && (
+                    <a
+                      href={project.links.demo}
+                      className="btn-demo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink size={18} /> Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* --- MODAL (Lightbox) --- */}
         {selectedProject && (
           <div className="modal-overlay" onClick={handleCloseModal}>
-            <div
-              className="modal-content"
-              onClick={(e) => e.stopPropagation()}
-            >
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
               <div className="modal-header">
                 <h3>{selectedProject.title}</h3>
                 <button className="close-btn" onClick={handleCloseModal}>
@@ -206,11 +208,7 @@ export default function Projects() {
                     selectedProject.screenshots.map((shot, index) => (
                       <div key={index} className="gallery-item">
                         <h4 className="gallery-title">{shot.title}</h4>
-                        <img
-                          src={shot.url}
-                          alt={shot.title}
-                          loading="lazy"
-                        />
+                        <img src={shot.url} alt={shot.title} loading="lazy" />
                       </div>
                     ))}
                 </div>
@@ -221,5 +219,4 @@ export default function Projects() {
       </div>
     </section>
   );
-
 }

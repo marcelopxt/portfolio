@@ -56,14 +56,6 @@ export default function Skills() {
                 />
                 <span>React</span>
               </div>
-              {/* React Native (Novo) */}
-              <div className="tech-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                  alt="React Native"
-                />
-                <span>React Native</span>
-              </div>
               {/* Bootstrap */}
               <div className="tech-item">
                 <img
@@ -165,25 +157,6 @@ export default function Skills() {
                   alt="Git"
                 />
                 <span>Git</span>
-              </div>
-              <div className="tech-item">
-                <div
-                  style={{
-                    width: "32px",
-                    height: "32px",
-                    background: "#fff",
-                    borderRadius: "50%",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: "10px",
-                    color: "#000",
-                    fontWeight: "bold",
-                  }}
-                >
-                  CI
-                </div>
-                <span>CI/CD</span>
               </div>
             </div>
           </div>
